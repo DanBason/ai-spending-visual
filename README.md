@@ -30,9 +30,9 @@ npm run preview
 
 ## Deploy to GitHub Pages
 
-The Vite `base` is set to `/ai-buildout/` by default in `vite.config.ts`, matching a GitHub
-Pages project site at `https://<username>.github.io/ai-buildout/`. Adjust the repo name in
-`base` if your repository is named differently, or override it at build time:
+The Vite `base` is set to `/ai-spending-visual/` by default in `vite.config.ts`, matching a
+GitHub Pages project site at `https://<username>.github.io/ai-spending-visual/`. Adjust the
+repo name in `base` if your repository is named differently, or override it at build time:
 
 ```bash
 VITE_BASE=/your-repo-name/ npm run build
