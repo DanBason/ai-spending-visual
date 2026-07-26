@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  /* Editorial newsletter paper: warm cream, not white */
+  --color-surface-0: #f6f1e6;
+  --color-surface-1: #efe6d3;
+  --color-surface-2: #fbf8f0;
+  --color-surface-3: #e4d8bb;
+  --color-ink-0: #1a1a2e;
+  --color-ink-1: #33333f;
+  --color-ink-2: #5c5c6b;
+  --color-ink-3: #8a8a94;
+  --color-hairline: #ddd0ac;
+
+  /* Bold ink border for cards and toggles, poster-style */
+  --color-outline: #1a1a2e;
+
+  /* The one restrained accent: Prof G coral */
+  --color-led: #ff5a36;
+  --color-led-soft: #ff5a3626;
+
+  /* Secondary cool hue, used sparingly for reference/annotation only */
+  --color-signal: #1b3a5c;
+
+  /* Company identity — flat editorial palette, one color per company */
+  --color-amazon: #ff5a36;
+  --color-microsoft: #1b3a5c;
+  --color-alphabet: #e8a33d;
+  --color-meta: #2f6f4e;
+
+  /* Neutral debate columns — no red/green verdict coding */
+  --color-bull-edge: #1b3a5c;
+  --color-bear-edge: #c98a2c;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-surface-0);
+  color: var(--color-ink-1);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-ink-0);
+}
+
+.tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.dot-grid {
+  background-image: radial-gradient(var(--color-ink-0) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-led);
+  outline-offset: 3px;
+}
